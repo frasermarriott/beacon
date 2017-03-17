@@ -12,7 +12,7 @@ return [
     | any other location as required by the application or its packages.
     */
 
-    'name' => 'Laravel',
+    'name' => 'beacon',
 
     /*
     |--------------------------------------------------------------------------
@@ -171,11 +171,11 @@ return [
         /*
          * Application Service Providers...
          */
-        App\Providers\AppServiceProvider::class,
-        App\Providers\AuthServiceProvider::class,
-        // App\Providers\BroadcastServiceProvider::class,
-        App\Providers\EventServiceProvider::class,
-        App\Providers\RouteServiceProvider::class,
+        beacon\Providers\AppServiceProvider::class,
+        beacon\Providers\AuthServiceProvider::class,
+        // beacon\Providers\BroadcastServiceProvider::class,
+        beacon\Providers\EventServiceProvider::class,
+        beacon\Providers\RouteServiceProvider::class,
 
     ],
 
