@@ -1,0 +1,17 @@
+.navbar-brand > img {
+	width: 130px;
+}
+
+.banner-image {
+	display:block;
+    margin:auto;
+}
+
+#button-container {
+	width: 100%;
+	text-align: center;
+}
+
+.splash-call-to-action {
+
+}

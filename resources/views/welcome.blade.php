@@ -1,87 +1,68 @@
-<!DOCTYPE html>
-<html lang="{{ config('app.locale') }}">
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+@extends('layouts.app')
 
-        <title>beacon</title>
+@section('title', 'Welcome')
 
-        <!-- Fonts -->
-        <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
+@section('content')
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            {{-- <div class="panel panel-default">
+                <div class="panel-heading">Splash page</div>
 
-        <!-- Styles -->
-        <style>
-            html, body {
-                background-color: #fff;
-                color: #636b6f;
-                font-family: 'Raleway', sans-serif;
-                font-weight: 100;
-                height: 100vh;
-                margin: 0;
-            }
-
-            .full-height {
-                height: 100vh;
-            }
-
-            .flex-center {
-                align-items: center;
-                display: flex;
-                justify-content: center;
-            }
-
-            .position-ref {
-                position: relative;
-            }
-
-            .top-right {
-                position: absolute;
-                right: 10px;
-                top: 18px;
-            }
-
-            .content {
-                text-align: center;
-            }
-
-            .title {
-                font-size: 84px;
-            }
-
-            .links > a {
-                color: #636b6f;
-                padding: 0 25px;
-                font-size: 12px;
-                font-weight: 600;
-                letter-spacing: .1rem;
-                text-decoration: none;
-                text-transform: uppercase;
-            }
-
-            .m-b-md {
-                margin-bottom: 30px;
-            }
-        </style>
-    </head>
-    <body>
-        <div class="flex-center position-ref full-height">
-            @if (Route::has('login'))
-                <div class="top-right links">
-                    @if (Auth::check())
-                        <a href="{{ url('/home') }}">Home</a>
-                    @else
-                        <a href="{{ url('/login') }}">Login</a>
-                        <a href="{{ url('/register') }}">Register</a>
-                    @endif
+                <div class="panel-body">
+                    Welcome
                 </div>
-            @endif
+            </div> --}}
 
-            <div class="content">
-                <div class="title m-b-md">
-                    beacon
+            <section>
+
+                <img src="http://placehold.it/750x250" class="img-responsive banner-image">
+
+                <div id="button-container">
+                    <a href="{{ route('register') }}" class="btn btn-primary btn-raised splash-call-to-action">Sign up now!</a>
                 </div>
-            </div>
+
+            </section>
+
+            <hr><br>
+
+            <section>
+
+            <h3>Information about the website</h3>
+                <div class="col-md-8">
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean pretium sagittis mattis. Integer egestas magna in turpis lobortis, ut accumsan tellus convallis. Aliquam vulputate, ipsum vitae viverra malesuada, quam quam blandit nisl, at egestas tortor lorem quis tellus. Curabitur diam neque, lobortis sit amet maximus at, accumsan sed lorem. In nisl justo, volutpat ut libero vel, pretium finibus lacus. Fusce convallis justo augue, eu sagittis quam luctus quis. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Aenean varius non elit et dictum.
+                    </p>
+                </div>
+
+                <div class="col-md-4">
+                    <img src="http://placehold.it/350x350" class="img-responsive">
+                </div>
+                
+
+            </section>
+
+            <hr><br>
+
+            <h3>Features</h3>
+                <div class="col-md-7">
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean pretium sagittis mattis. Integer egestas magna in turpis lobortis, ut accumsan tellus convallis. Aliquam vulputate, ipsum vitae viverra malesuada, quam quam blandit nisl, at egestas tortor lorem quis tellus. Curabitur diam neque, lobortis sit amet maximus at, accumsan sed lorem. In nisl justo, volutpat ut libero vel, pretium finibus lacus. Fusce convallis justo augue, eu sagittis quam luctus quis. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Aenean varius non elit et dictum.
+                    </p>
+                </div>
+
+                <div class="col-md-5">
+                    <img src="{{ asset('img/mockup-devices.png') }}" class="img-responsive">
+                    {{-- <img src="http://placehold.it/450x350" class="img-responsive"> --}}
+                </div>
+                
+
+            </section>
+
+            <br><br>
+
         </div>
-    </body>
-</html>
+    </div>
+</div>
+@endsection
+
