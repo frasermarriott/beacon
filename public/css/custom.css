@@ -1,5 +1,33 @@
+body {
+	font-size: 1.5em;
+}
+
+li > a {
+	font-size: 2em;
+}
+
+@media (min-width: 1200px) {
+	.navbar-brand {
+		padding: 7px 15px !important;
+	}
+
+	.navbar-brand > img {
+		width: 180px !important;
+	}
+}
+
+/* .navbar-brand:hover {
+	background: #1ba99b !important;
+} */
+
 .container {
 	width: 85%;
+}
+
+/* Dashboard width fix */
+#tiles > .row {
+	margin-left: 0;
+	margin-right: 0;
 }
 
 .navbar-brand > img {
@@ -20,6 +48,20 @@
 
 }
 
+@media (max-width: 992px) {
+	#dash-fullsize {
+		visibility: hidden;
+		display: none;
+	}
+}
+
+@media (min-width: 992px) {
+	#dash-mobile {
+		visibility: hidden;
+		display: none;
+	}
+}
+
 .dashboard-nav {
 	position: absolute;
 	width: 100%;
@@ -34,6 +76,12 @@
 
 .dashboard-item {
 	height: 350px;
+}
+
+@media (max-width: 768px) {
+	.dashboard-item {
+		height: 220px;
+	}
 }
 
 .dashboard-item:hover {
@@ -77,6 +125,41 @@ h1 > img {
 	/* height: 100px; */
 }
 
+@media (min-width: 900px) {
+
+	/* .dashboard-icon {
+	    width:100%;
+	    height:100%;
+	    text-align: center;
+	} */
+
+	.dashboard-icon > img {
+		width: 100px;
+		/* height: 100px; */
+	}
+
+	.messages > img {
+		width: 150px;
+	}
+
+	.photos > img {
+		width: 120px;
+	}
+
+	.family > img {
+		width: 130px;
+	}
+
+	.profile > img {
+		width: 120px;
+	}
+
+	.settings > img {
+		width: 110px;
+	}
+}
+
+
 .centerer {
     display: inline-block;
     height: 100%;
@@ -88,20 +171,64 @@ h1 > img {
     vertical-align: middle;
 }
 
-.img-bg {
+/* .img-bg {
 	background: red;
 	border-radius: 100%;
     width: 200px;
     height: 200px; 
-}
+} */
 
 .tile-title {
 	display: block;
     color: white;
     z-index: 555;
     position: relative;
-    line-height: 0;
+    /* line-height: 0; */
     padding: 0;
-    margin-top: -85px;
+    margin-top: -75px;
     font-weight: 400;
+    font-size: 2.5em;
+}
+
+@media (max-width: 768px) {
+	.tile-title {
+    margin-top: -45px;
+    font-size: 1.5em;
+	}
+}
+
+.newsfeed > .tile-title {
+	text-shadow: 1px 2px #7d7d7d;
+}
+
+/* Animation fix */
+.hvr-curl-top-right {
+    display: block !important;
+}
+
+#wrap {
+    min-height: 100%;
+    padding-bottom: 150px;
+    font-size: 16px;
+}
+#centered {
+    min-height: 80%;
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+}
+
+.panel-heading {
+	font-size: 1.5em;
+	font-weight: 500;
+	color: #5d5d5d !important;
+}
+
+label {
+	font-size: 1.2em !important;
+	color: #5d5d5d !important;
+}
+
+.form-control {
+	height: 70px !important;
 }

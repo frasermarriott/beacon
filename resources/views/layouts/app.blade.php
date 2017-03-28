@@ -20,6 +20,7 @@
     <link href="{{ asset('css/ripples.min.css') }}" rel="stylesheet">
     <link href="{{ asset('css/custom.css') }}" rel="stylesheet">
     <link href="{{ asset('css/jquery-ui.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/hover.min.css') }}" rel="stylesheet">
 
 
     {{-- jQuery --}}

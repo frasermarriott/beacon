@@ -12,9 +12,9 @@ $(function(){
 	    console.log(icon);
 	    console.log(temp);
 
-	    $("#weather_temp").html(temp);
-	    $("#weather_desc").html(desc);
+	    $(".weather_temp").html(temp);
+	    $(".weather_desc").html(desc);
 
-	    $("#weather_temp").before("<img src='../img/weather/"+icon+".svg' alt='weather icon'>");
+	    $(".weather_temp").before("<img src='../img/weather/"+icon+".svg' alt='weather icon'>");
 	});
 });
