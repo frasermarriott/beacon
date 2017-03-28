@@ -28,10 +28,9 @@
                 <div class="hidden">
                     <form id="weather_api">
                         {{-- hardcoded location temporarily, will get users location from database --}}
-                        <input type="hidden" id="city_name" value="Edinburgh">
+                        <input type="hidden" id="city_name" value="aberdeen">
                     </form>
                 </div>
-
 
                 <h1 class="weather"><div id="weather_temp"></div>°C, <div id="weather_desc"></div></h1>
 
@@ -47,15 +46,37 @@
 
     <div class="row">
         <div class="col-md-4 dashboard-item" style="background-color:#9e4c3b">
+            <div class="dashboard-icon messages">
+                <span class="centerer"></span>
 
+                <img src="{{ asset('img/dashboard/messages.svg') }}" class="centered">
+
+                <h2 class="centered tile-title">Messages</h2>
+
+            </div>
         </div>
 
+
         <div class="col-md-4 dashboard-item" style="background-color:#d2ab59">
-        
+            <div class="dashboard-icon newsfeed">
+                <span class="centerer"></span>
+
+                <img src="{{ asset('img/dashboard/newsfeed.svg') }}" class="centered">
+
+                <h2 class="centered tile-title">Activity Feed</h2>
+
+            </div>
         </div>
 
         <div class="col-md-4 dashboard-item" style="background-color:#549767">
-        
+            <div class="dashboard-icon photos">
+                <span class="centerer"></span>
+
+                <img src="{{ asset('img/dashboard/photos.svg') }}" class="centered">
+
+                <h2 class="centered tile-title">Photos</h2>
+
+            </div>
         </div>
 
     </div>
@@ -64,15 +85,36 @@
     <div class="row">
 
         <div class="col-md-4 dashboard-item" style="background-color:#34908f">
+            <div class="dashboard-icon family">
+                <span class="centerer"></span>
 
+                <img src="{{ asset('img/dashboard/family.svg') }}" class="centered">
+
+                <h2 class="centered tile-title">My Family</h2>
+
+            </div>
         </div>
 
         <div class="col-md-4 dashboard-item" style="background-color:#756099">
-        
+            <div class="dashboard-icon profile">
+                <span class="centerer"></span>
+
+                <img src="{{ asset('img/dashboard/profile.svg') }}" class="centered">
+
+                <h2 class="centered tile-title">My Profile</h2>
+
+            </div>       
         </div>
 
         <div class="col-md-4 dashboard-item" style="background-color:#346ca4">
-        
+            <div class="dashboard-icon settings">
+                <span class="centerer"></span>
+
+                <img src="{{ asset('img/dashboard/settings.svg') }}" class="centered">
+
+                <h2 class="centered tile-title">Help &amp; Settings</h2>
+
+            </div>       
         </div>
 
     </div>

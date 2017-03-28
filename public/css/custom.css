@@ -1,3 +1,7 @@
+.container {
+	width: 85%;
+}
+
 .navbar-brand > img {
 	width: 130px;
 }
@@ -19,7 +23,6 @@
 .dashboard-nav {
 	position: absolute;
 	width: 100%;
-	/* height: 100vh; */
 }
 
 @media (min-width: 992px) and (min-height: 1080px) {
@@ -30,9 +33,11 @@
 
 
 .dashboard-item {
-	background-color: red;
-	/* border:  2px solid blue; */
 	height: 350px;
+}
+
+.dashboard-item:hover {
+	cursor: pointer;
 }
 
 .dashboard-heading {
@@ -58,4 +63,45 @@ h1 > img {
 	height: 100%;
 	margin-top: -5px;
 	margin-right: 8px;
+}
+
+.dashboard-icon {
+	/* position:absolute; */
+    width:100%;
+    height:100%;
+    text-align: center;
+}
+
+.dashboard-icon > img {
+	width: 100px;
+	/* height: 100px; */
+}
+
+.centerer {
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+}
+
+.centered {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.img-bg {
+	background: red;
+	border-radius: 100%;
+    width: 200px;
+    height: 200px; 
+}
+
+.tile-title {
+	display: block;
+    color: white;
+    z-index: 555;
+    position: relative;
+    line-height: 0;
+    padding: 0;
+    margin-top: -85px;
+    font-weight: 400;
 }

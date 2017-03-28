@@ -2,7 +2,7 @@ $(function(){
 	var city_name = $("#city_name").val();
 	console.log(city_name)
 
-	$.get("http://api.openweathermap.org/data/2.5/weather?q="+city_name+"&appid=43bf092fe352dfb22bfd073a36dd9824", function(data) { 
+	$.get("http://api.openweathermap.org/data/2.5/weather?q="+city_name+",uk&appid=43bf092fe352dfb22bfd073a36dd9824", function(data) { 
 	    console.log(data);
 	    var celcius = data.main.temp - 273.15;
 	    var temp = Math.round(celcius);
