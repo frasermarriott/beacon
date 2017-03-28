@@ -26,6 +26,10 @@
     <script src="{{ asset('js/jquery.min.js') }}"></script>
     <script src="{{ asset('js/jquery-ui.min.js') }}"></script>
 
+    {{-- JS --}}
+    <script src="{{ asset('js/custom.js') }}"></script>
+
+
     <!-- Scripts -->
     <script>
         window.Laravel = {!! json_encode([
@@ -92,6 +96,7 @@
         </nav>
 
         @yield('content')
+
     </div>
 
     <!-- Scripts -->
