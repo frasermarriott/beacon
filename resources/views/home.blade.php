@@ -7,20 +7,21 @@
 <div class="dashboard-nav">
 
     <div class="container">
-       {{--  <div class="row">
-            <div class="col-md-12 dashboard-heading">
-            <br><br>
-            <h1>Welcome, {{ ucwords(\Auth::user()->name) }}</h1>
 
-            <br>
-            Weather: <div id="weather_temp"></div>°C
-
-            </div>
-        </div> --}}
 
         <div class="row">
             <div class="col-md-6 dashboard-heading">
-                <h1>Welcome, {{ ucwords(\Auth::user()->name) }}</h1>
+                {{-- Check the time of day and display appropriate greeting. --}}
+                @if (Carbon::now()->hour < 12)
+                    <h1>Good morning, {{ ucwords(\Auth::user()->name) }}</h1>
+                @elseif (Carbon::now()->hour > 11 && Carbon::now()->hour < 18)
+                    <h1>Good afternoon, {{ ucwords(\Auth::user()->name) }}</h1>
+                @elseif(Carbon::now()->hour > 17) 
+                    <h1>Good evening, {{ ucwords(\Auth::user()->name) }}</h1>
+                @else
+                    <h1>Welcome, {{ ucwords(\Auth::user()->name) }}</h1>
+                @endif
+                
             </div>
 
 
@@ -32,7 +33,7 @@
                     </form>
                 </div>
 
-                <h1 class="weather"><div id="weather_temp"></div>°C, <div id="weather_desc"></div></h1>
+                <h1 class="weather"><div id="weather_temp"></div>&deg;C, <div id="weather_desc"></div></h1>
 
             </div>
         </div>
