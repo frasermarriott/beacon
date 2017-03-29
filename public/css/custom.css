@@ -56,11 +56,24 @@ li > a {
 
 #subnav {
 	width: 100%;
-    /* background: #f9f9f9; */
+    background: #f9f9f9;
     height: 80px;
     top: 0;
     position: static;
     display: block;
+}
+
+#subnav > .container {
+	height: 100%;
+}
+
+.button-wrapper {
+	height: 100%;
+	display: inline-block;
+}
+
+.button-wrapper > a {
+	top: 14px;
 }
 
 .navbar {
@@ -276,4 +289,49 @@ label {
 
 .form-control {
 	height: 70px !important;
+}
+
+
+/* Messages */
+
+.messages-container {
+	height: 100vh;
+	/* margin-top: -10px; */
+}
+
+.conversations-container {
+	height: 100vh;
+	background: #e4e4e4;
+}
+
+.conversations-container > h3 {
+	text-align: center;
+	font-weight: bold;
+}
+
+
+
+/* Photos */
+
+.photo-grid-item {
+	width: 400px;
+	min-height: 300px;
+	max-height: 300px;
+	object-fit: cover;
+}
+
+
+/* Profile */
+
+.profile-pic {
+	border-radius: 100%;
+	width: 250px;
+	height: 250px;
+	object-fit: cover;
+	margin-left: 15px;
+    margin-top: 60px;
+}
+
+.change-profile-pic {
+	margin-left: 0px;
 }

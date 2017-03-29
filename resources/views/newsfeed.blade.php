@@ -1,26 +1,41 @@
 @extends('layouts.app')
 
-@section('title', 'Newsfeed')
+@section('title', 'Activity Feed')
 
 @section('content')
 
-<div class="dashboard-nav">
 
+<div id="subnav">
     <div class="container">
+    	<div class="row">
+    		<div class="col-md-2 col-sm-2 col-xs-2">
+    			<div class="button-wrapper">
+    			<a href="{{ URL::previous() }}" class="btn btn-default btn-lg"> < Back</a>
+    			</div>
+    		</div>
+
+    		<div class="col-md-8 col-sm-8 col-xs-8" style="text-align:center;">
+    			<h2>Activity Feed</h2>
+    		</div>
+    	
+    </div>
+</div>
 
 
-        <div class="row">
-            <div class="col-md-6">
+<div class="container">
 
-                    <h1>News feed</h1>
 
-                
-            </div>
+    <div class="row">
+        <div class="col-md-12">
 
+          <img src="{{ asset('img/newsfeed-mockup.png') }}" class="img-responsive">
+
+            
         </div>
 
     </div>
 
-
 </div>
+
+
 @endsection
