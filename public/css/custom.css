@@ -24,6 +24,12 @@ li > a {
 	width: 85%;
 }
 
+@media (max-width: 1180px) {
+	.container {
+		width: 100%;
+	}
+}
+
 /* Dashboard width fix */
 #tiles > .row {
 	margin-left: 0;
@@ -115,6 +121,25 @@ li > a {
     display: block;
     position: relative;
     height: 30px;
+}
+
+.welcome-greeting {
+	white-space: nowrap;
+}
+
+@media (max-width: 768px) {
+	.welcome-greeting > h1 {
+		font-size: 1.8em;
+	}
+
+	.dashboard-weather {
+		display: none;
+		visibility: hidden;
+	}
+
+	#subnav {
+		height: 70px;
+	}
 }
 
 .dashboard-weather {

@@ -6,7 +6,7 @@
 
 <div id="subnav">
     <div class="container">
-        <div class="col-md-6">
+        <div class="col-md-6 col-sm-6 welcome-greeting">
             {{-- Check the time of day and display appropriate greeting. --}}
             @if (Carbon::now()->hour < 12)
                 <h1>Good morning, {{ ucwords(\Auth::user()->name) }}</h1>
@@ -20,7 +20,7 @@
             
         </div>
 
-        <div class="col-md-6 dashboard-weather">
+        <div class="col-md-6 col-sm-6 dashboard-weather">
             <div class="hidden">
                 <form id="weather_api">
                     {{-- hardcoded location temporarily, will get users location from database --}}
