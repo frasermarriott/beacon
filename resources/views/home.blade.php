@@ -20,7 +20,7 @@
             
         </div>
 
-        <div class="col-md-6 col-sm-6 dashboard-weather">
+        <!--<div class="col-md-6 col-sm-6 dashboard-weather">
             <div class="hidden">
                 <form id="weather_api">
                     {{-- hardcoded location temporarily, will get users location from database --}}
@@ -30,7 +30,7 @@
 
             <h1 class="weather"><div class="weather_temp"></div>&deg;C, <div class="weather_desc"></div></h1>
 
-        </div>
+        </div>-->
     </div>
 </div>
 

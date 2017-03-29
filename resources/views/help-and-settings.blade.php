@@ -27,7 +27,7 @@
     <div class="row">
         <div class="col-xl-12">
 
-          <img src="{{ asset('img/settings-mockup.png') }}" class="img-responsive">
+          <img src="{{ asset('img/settings-mockup.PNG') }}" class="img-responsive">
 
             
         </div>

@@ -28,7 +28,7 @@
     <div class="row">
         <div class="col-md-12">
 
-          <img src="{{ asset('img/newsfeed-mockup.png') }}" class="img-responsive">
+          <img src="{{ asset('img/newsfeed-mockup.PNG') }}" class="img-responsive">
 
             
         </div>
