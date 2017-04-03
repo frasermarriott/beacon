@@ -335,3 +335,8 @@ label {
 .change-profile-pic {
 	margin-left: 0px;
 }
+
+
+.panel {
+	border-radius: 10px;
+}

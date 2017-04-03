@@ -22,7 +22,7 @@
     <link href="{{ asset('css/jquery-ui.css') }}" rel="stylesheet">
     <link href="{{ asset('css/hover.min.css') }}" rel="stylesheet">
 
-
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDxp1BrEKzSdjDqm5p0Zbu0vGm5NEmoR78"></script>
     {{-- jQuery --}}
     <script src="{{ asset('js/jquery.min.js') }}"></script>
     <script src="{{ asset('js/jquery-ui.min.js') }}"></script>
@@ -73,7 +73,7 @@
                         @else
                             <li class="dropdown">
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
-                                    {{ ucwords(\Auth::user()->name) }} <span class="caret"></span>
+                                    {{ ucwords(\Auth::user()->first_name) }} <span class="caret"></span>
                                 </a>
 
                                 <ul class="dropdown-menu" role="menu">

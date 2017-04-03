@@ -9,17 +9,18 @@
         <div class="col-md-6 col-sm-6 welcome-greeting">
             {{-- Check the time of day and display appropriate greeting. --}}
             @if (Carbon::now()->hour < 12)
-                <h1>Good morning, {{ ucwords(\Auth::user()->name) }}</h1>
+                <h1>Good morning, {{ ucwords(\Auth::user()->first_name) }}</h1>
             @elseif (Carbon::now()->hour > 11 && Carbon::now()->hour < 18)
-                <h1>Good afternoon, {{ ucwords(\Auth::user()->name) }}</h1>
+                <h1>Good afternoon, {{ ucwords(\Auth::user()->first_name) }}</h1>
             @elseif(Carbon::now()->hour > 17) 
-                <h1>Good evening, {{ ucwords(\Auth::user()->name) }}</h1>
+                <h1>Good evening, {{ ucwords(\Auth::user()->first_name) }}</h1>
             @else
-                <h1>Welcome, {{ ucwords(\Auth::user()->name) }}</h1>
+                <h1>Welcome, {{ ucwords(\Auth::user()->first_name) }}</h1>
             @endif
             
         </div>
 
+        {{-- OpenWeatherMap --}}
         <!--<div class="col-md-6 col-sm-6 dashboard-weather">
             <div class="hidden">
                 <form id="weather_api">
@@ -31,6 +32,10 @@
             <h1 class="weather"><div class="weather_temp"></div>&deg;C, <div class="weather_desc"></div></h1>
 
         </div>-->
+
+
+
+
     </div>
 </div>
 

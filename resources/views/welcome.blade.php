@@ -16,7 +16,7 @@
 
             <section>
 
-                <img src="http://placehold.it/750x250" class="img-responsive banner-image">
+                <img src="{{ asset('img/dashboard-img2.png') }}" class="img-responsive banner-image" style="height:350px;">
 
                 <div id="button-container">
                     <a href="{{ route('register') }}" class="btn btn-primary btn-raised splash-call-to-action">Sign up now!</a>
@@ -31,6 +31,7 @@
             <h3>Information about the website</h3>
                 <div class="col-md-8">
                     <p>
+                        Beacon is a social media website that is designed to be usable by people who do not have much experience using digital technology. The main aim of the website is to help older adults to keep in touch with their loved ones.  
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean pretium sagittis mattis. Integer egestas magna in turpis lobortis, ut accumsan tellus convallis. Aliquam vulputate, ipsum vitae viverra malesuada, quam quam blandit nisl, at egestas tortor lorem quis tellus. Curabitur diam neque, lobortis sit amet maximus at, accumsan sed lorem. In nisl justo, volutpat ut libero vel, pretium finibus lacus. Fusce convallis justo augue, eu sagittis quam luctus quis. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Aenean varius non elit et dictum.
                     </p>
                 </div>
@@ -47,7 +48,12 @@
             <h3>Features</h3>
                 <div class="col-md-7">
                     <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean pretium sagittis mattis. Integer egestas magna in turpis lobortis, ut accumsan tellus convallis. Aliquam vulputate, ipsum vitae viverra malesuada, quam quam blandit nisl, at egestas tortor lorem quis tellus. Curabitur diam neque, lobortis sit amet maximus at, accumsan sed lorem. In nisl justo, volutpat ut libero vel, pretium finibus lacus. Fusce convallis justo augue, eu sagittis quam luctus quis. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Aenean varius non elit et dictum.
+                        <ul>
+                            <li>Messaging</li>
+                            <li>Photo Sharing</li>
+                            <li>Easy to use</li>
+                            <li>Accessibility settings</li>
+                        </ul>
                     </p>
                 </div>
 
