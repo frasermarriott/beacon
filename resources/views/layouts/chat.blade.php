@@ -1,9 +1,15 @@
 <!DOCTYPE html>
 <html >
   <head>
-    <meta charset="UTF-8">
+    <meta charset="utf-8">
+    <!-- CSRF Token -->
     <meta name="csrf-token" content="{{csrf_token()}}">
-    <title>Talk Message</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    
+
+    <title>Messages</title>
     
     
     <link rel="stylesheet" href="{{asset('chat/css/reset.css')}}">
@@ -28,6 +34,13 @@
     <script src="{{ asset('js/custom.js') }}"></script>
     
     <script src="https://js.pusher.com/4.0/pusher.min.js"></script>
+
+    <!-- Scripts -->
+{{--     <script>
+        window.Laravel = {!! json_encode([
+            'csrfToken' => csrf_token(),
+        ]) !!};
+    </script> --}}
 
     
   </head>
@@ -135,6 +148,8 @@
       
       <div class="chat-message clearfix">
       <form action="" method="post" id="talkSendMessage">
+            {{-- <input type="hidden" id="token" value="{{ csrf_token() }}"> --}}
+            {{-- {{ csrf_field() }} --}}
             <textarea name="message-data" id="message-data" placeholder ="Type your message" rows="3"></textarea>
             <input type="hidden" name="_id" value="{{@request()->route('id')}}">
             <button type="submit" class="btn btn-primary btn-raised">Send</button>
@@ -150,19 +165,22 @@
       <script>
           var __baseUrl = "{{url('/')}}"
       </script>
-    <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
-    <script src='http://cdnjs.cloudflare.com/ajax/libs/handlebars.js/3.0.0/handlebars.min.js'></script>
-    <script src='http://cdnjs.cloudflare.com/ajax/libs/list.js/1.1.1/list.min.js'></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/3.0.0/handlebars.min.js'></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/list.js/1.1.1/list.min.js'></script>
 
 
 
     <script src="{{asset('chat/js/talk.js')}}"></script>
 
     <script>
+
+
         var show = function(data) {
             alert(data.sender.first_name + " - '" + data.message + "'");
         }
         var msgshow = function(data) {
+
             var html = '<li id="message-' + data.id + '">' +
             '<div class="message-data">' +
             '<span class="message-data-name"> <a href="#" class="talkDeleteMessage" data-message-id="' + data.id + '" title="Delete Message"><i class="fa fa-close" style="margin-right: 3px;"></i></a>' + data.sender.first_name + '</span>' +
@@ -194,10 +212,5 @@
 
   </body>
 
-    <script>
-        var pusher = new Pusher('adbf84b299a53e9ed5f6', {
-          // cluster: 'eu',
-          // encrypted: true
-        });
-    </script>
+
 </html>

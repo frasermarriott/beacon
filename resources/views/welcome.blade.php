@@ -37,7 +37,7 @@
                 </div>
 
                 <div class="col-md-4">
-                    <img src="http://placehold.it/350x350" class="img-responsive">
+                    <img src="https://placehold.it/350x350" class="img-responsive">
                 </div>
                 
 

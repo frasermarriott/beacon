@@ -4,6 +4,11 @@ $(document).ready(function () {
             'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
         }
     });
+    // $.ajaxSetup({
+    //     headers: {
+    //         'X-CSRF-TOKEN': $('[name="_token"]').val()
+    //     }
+    // });
 
 
     $('#talkSendMessage').on('submit', function(e) {
@@ -12,6 +17,8 @@ $(document).ready(function () {
         tag = $(this);
         url = __baseUrl + '/ajax/message/send';
         data = tag.serialize();
+
+        // console.log(token.value);
 
         request = $.ajax({
             method: "post",
@@ -37,7 +44,7 @@ $(document).ready(function () {
         id = tag.data('message-id');
         url = __baseUrl + '/ajax/message/delete/' + id;
 
-        if(!confirm('Do you want to delete this message?')) {
+        if(!confirm('Are you sure you want to delete this message?')) {
             return false;
         }
 

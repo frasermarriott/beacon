@@ -44,6 +44,6 @@ Route::group(['middleware' => 'web'], function () {
 });
 
 Route::group(['prefix'=>'ajax', 'as'=>'ajax::'], function() {
-   Route::post('message/send', 'MessageController@ajaxSendMessage')->name('message.new');
-   Route::delete('message/delete/{id}', 'MessageController@ajaxDeleteMessage')->name('message.delete');
+  	Route::post('message/send', 'MessageController@ajaxSendMessage')->name('message.new');
+   	Route::delete('message/delete/{id}', 'MessageController@ajaxDeleteMessage')->name('message.delete');
 });
