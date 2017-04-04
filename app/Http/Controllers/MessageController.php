@@ -49,6 +49,7 @@ class MessageController extends Controller
     }
     public function ajaxSendMessage(Request $request)
     {
+        // $this->middleware(function ($request, $next) { Talk::setAuthUserId(Auth::user()->id); return $next($request); });
         if ($request->ajax()) {
             $rules = [
                 'message-data'=>'required',
