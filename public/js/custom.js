@@ -1,4 +1,13 @@
 $(function(){
+
+	$('#chat-history').scrollTop($('#chat-history')[0].scrollHeight);
+
+	$( "#talkSendMessage" ).submit(function( event ) {
+		$('#chat-history').scrollTop($('#chat-history')[0].scrollHeight);
+	});
+
+
+
 	// var city_name = $("#city_name").val();
 	// console.log(city_name)
 

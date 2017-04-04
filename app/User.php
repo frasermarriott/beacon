@@ -4,6 +4,7 @@ namespace beacon;
 
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Foundation\Auth\User as Authenticatable;
+use YoHang88\LetterAvatar\LetterAvatar;
 
 class User extends Authenticatable
 {
@@ -29,4 +30,10 @@ class User extends Authenticatable
     protected $hidden = [
         'password', 'remember_token',
     ];
+
+    public function getAvatarAttribute()
+    {
+        $fullname = $this->first_name . ' ' . $this->surname;
+        return new LetterAvatar($fullname);
+    }
 }

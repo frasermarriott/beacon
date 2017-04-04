@@ -36,3 +36,14 @@ Route::get('/help-and-settings', ['as' => 'help-and-settings', 'uses' => 'HomeCo
 Auth::routes();
 
 Route::get('/home', 'HomeController@index');
+
+// Messenger
+Route::group(['middleware' => 'web'], function () {
+	Route::Auth();
+	Route::get('message/{id}', 'MessageController@chatHistory')->name('message.read');
+});
+
+Route::group(['prefix'=>'ajax', 'as'=>'ajax::'], function() {
+   Route::post('message/send', 'MessageController@ajaxSendMessage')->name('message.new');
+   Route::delete('message/delete/{id}', 'MessageController@ajaxDeleteMessage')->name('message.delete');
+});

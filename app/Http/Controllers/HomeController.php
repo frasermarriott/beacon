@@ -2,11 +2,13 @@
 
 namespace beacon\Http\Controllers;
 
+use beacon\User;
 use Illuminate\Http\Request;
 use Auth;
 use DB;
 use Input;
 use \Storage;
+use Nahid\Talk\Live\Broadcast;
 
 class HomeController extends Controller
 {
@@ -36,7 +38,10 @@ class HomeController extends Controller
              return view('welcome');
          }
          else {
-             return view('messages');
+
+            $users = User::all();
+            return view('messages', compact('users'));
+
          }
     }
 

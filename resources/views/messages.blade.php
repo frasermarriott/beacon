@@ -28,7 +28,23 @@
     <div class="row">
         <div class="col-xl-12">
 
-          <img src="{{ asset('img/messages-mockup.png') }}" class="img-responsive">
+          {{-- <img src="{{ asset('img/messages-mockup.png') }}" class="img-responsive"> --}}
+
+            @foreach($users as $user)
+                    <table class="table">
+                        <tr>
+                            <td>
+                                <img src="{{$user->avatar}}">
+                                {{$user->first_name}}
+                            </td>
+                            <td>
+                                <a href="{{route('message.read', ['id'=>$user->id])}}" class="btn btn-success pull-right">Send Message</a>
+                            </td>
+                        </tr>
+                    </table>
+            @endforeach
+
+
 
             
         </div>

@@ -30,6 +30,10 @@
     {{-- JS --}}
     <script src="{{ asset('js/custom.js') }}"></script>
 
+    <script src="https://js.pusher.com/4.0/pusher.min.js"></script>
+
+
+
 
     <!-- Scripts -->
     <script>
@@ -40,7 +44,7 @@
 </head>
 <body>
     <div id="app">
-        <nav class="navbar navbar-default navbar-static-top">
+        <nav class="navbar navbar-default navbar-fixed-top">
             <div class="container">
                 <div class="navbar-header">
 
