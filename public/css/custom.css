@@ -368,6 +368,34 @@ label {
 }
 
 
+
+/* Chat responsive fixes */
+
+#chat-height-fixer {
+	margin-top: 140px;
+    height: calc(100vh - 140px);
+}
+
+.chat-container {
+	height: calc(100vh - 140px);
+}
+
+.chat {
+	height: calc(100vh - 140px);
+    /* overflow: auto; */
+    overflow: hidden;
+}
+
+.chat .chat-history {
+	height: calc(100vh - 430px);
+}
+
+.people-list ul {
+	height: 100%;
+}
+
+
+
 /* Photos */
 
 .photo-grid-item {

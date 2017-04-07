@@ -126,6 +126,8 @@
     </div>
   </div>
 
+<div id="chat-height-fixer">
+
   <div class="chat-container clearfix">
    @include('partials.peoplelist')
     
@@ -161,6 +163,7 @@
     
   </div> <!-- end container -->
 
+</div> <!-- end chat-height-fixer -->
 
       <script>
           var __baseUrl = "{{url('/')}}"
