@@ -1,24 +1,30 @@
 $(document).ready(function () {
+
+    // Set CSRF Headers
     $.ajaxSetup({
         headers: {
             'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
         }
     });
-    // $.ajaxSetup({
-    //     headers: {
-    //         'X-CSRF-TOKEN': $('[name="_token"]').val()
-    //     }
-    // });
+
+    // Display bottom of message list (most recent messages) by default when page is loaded.
+    $('#chat-history').scrollTop($('#chat-history')[0].scrollHeight);
+
+    // When message is sent, scroll to the bottom of the message list when new message is added.
+    $( "#talkSendMessage" ).submit(function( event ) {
+        setTimeout((function() {
+            $('#chat-history').scrollTop($('#chat-history')[0].scrollHeight);
+        }), 2000);
+    });
 
 
+    // When send button is clicked, submit message contents and sender info using ajax.
     $('#talkSendMessage').on('submit', function(e) {
         e.preventDefault();
         var url, request, tag, data;
         tag = $(this);
         url = __baseUrl + '/ajax/message/send';
         data = tag.serialize();
-
-        // console.log(token.value);
 
         request = $.ajax({
             method: "post",
@@ -36,6 +42,7 @@ $(document).ready(function () {
     });
 
 
+    // Delete message
     $('body').on('click', '.talkDeleteMessage', function (e) {
         e.preventDefault();
         var tag, url, id, request;

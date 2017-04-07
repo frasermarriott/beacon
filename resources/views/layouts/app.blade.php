@@ -5,6 +5,20 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
+    {{-- Favicon --}}
+    <link rel="shortcut icon" href="{{ asset('img/icons/favicon.ico') }}">
+
+    {{-- Mobile Themes --}}
+    <meta name="theme-color" content="#009688">
+    <meta name="msapplication-navbutton-color" content="#009688">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+    {{-- Mobile Settings --}}
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+
+    <link rel="icon" type="image/png" href="{{ asset('img/icons/logo-icon.png') }}" sizes="192x192">
+
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
@@ -19,6 +33,7 @@
     <link href="{{ asset('css/bootstrap-material-design.min.css') }}" rel="stylesheet">
     <link href="{{ asset('css/ripples.min.css') }}" rel="stylesheet">
     <link href="{{ asset('css/custom.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/timeline.css') }}" rel="stylesheet">
     <link href="{{ asset('css/jquery-ui.css') }}" rel="stylesheet">
     <link href="{{ asset('css/hover.min.css') }}" rel="stylesheet">
 

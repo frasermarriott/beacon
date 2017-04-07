@@ -17,11 +17,12 @@
     			<h2>Photos</h2>
     		</div>
     	
+        </div>
     </div>
 </div>
 
 
-<div class="container">
+<div class="container photos-container">
 
 <br>
     <div class="row">

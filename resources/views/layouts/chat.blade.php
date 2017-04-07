@@ -7,7 +7,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    
+    {{-- Favicon --}}
+    <link rel="shortcut icon" href="{{{ asset('img/icons/favicon.ico') }}}">
 
     <title>Messages</title>
     
@@ -178,6 +179,7 @@
 
     <script>
 
+        // Show new messages
 
         var show = function(data) {
             alert(data.sender.first_name + " - '" + data.message + "'");
