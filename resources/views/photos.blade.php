@@ -22,7 +22,7 @@
 </div>
 
 
-<div class="container photos-container">
+<div class="container push-top">
 
 <br>
     <div class="row">

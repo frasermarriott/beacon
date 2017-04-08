@@ -8,7 +8,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     {{-- Favicon --}}
-    <link rel="shortcut icon" href="{{{ asset('img/icons/favicon.ico') }}}">
+    <link rel="shortcut icon" href="{{ asset('img/icons/favicon.ico') }}">
+
+    {{-- Mobile Themes --}}
+    <meta name="theme-color" content="#009688">
+    <meta name="msapplication-navbutton-color" content="#009688">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+    {{-- Mobile Settings --}}
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+
+    <link rel="icon" type="image/png" href="{{ asset('img/icons/logo-icon.png') }}" sizes="192x192">
 
     <title>Messages</title>
     

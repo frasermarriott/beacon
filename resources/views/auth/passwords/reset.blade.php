@@ -1,7 +1,12 @@
 @extends('layouts.app')
 
+@section('title', 'Reset Password')
+
 @section('content')
-<div class="container">
+
+<div id="wrap">
+<div id="centered">
+<div class="container push-top">
     <div class="row">
         <div class="col-md-8 col-md-offset-2">
             <div class="panel panel-default">
@@ -72,5 +77,8 @@
             </div>
         </div>
     </div>
+</div>
+
+</div>
 </div>
 @endsection

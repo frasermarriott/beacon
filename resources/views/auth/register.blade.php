@@ -5,7 +5,7 @@
 @section('content')
 <div id="wrap">
 <div id="centered">
-<div class="container">
+<div class="container push-top">
     <div class="row">
         <div class="col-md-8 col-md-offset-2">
             <div class="panel panel-default">
@@ -32,7 +32,7 @@
                             <label for="surname" class="col-md-4 control-label">Surname</label>
 
                             <div class="col-md-6">
-                                <input id="surname" type="text" class="form-control" name="surname" value="{{ old('surname') }}" required autofocus>
+                                <input id="surname" type="text" class="form-control" name="surname" value="{{ old('surname') }}" required>
 
                                 @if ($errors->has('surname'))
                                     <span class="help-block">

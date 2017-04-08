@@ -5,7 +5,7 @@
 @section('content')
 <div id="wrap">
 <div id="centered">
-<div class="container">
+<div class="container push-top">
     <div class="row">
         <div class="col-md-8 col-md-offset-2">
             <div class="panel panel-default">
@@ -21,7 +21,7 @@
                                 <input id="email" type="email" class="form-control" name="email" value="{{ old('email') }}" required autofocus>
 
                                 @if ($errors->has('email'))
-                                    <span class="help-block">
+                                    <span class="help-block" style="display:contents">
                                         <strong>{{ $errors->first('email') }}</strong>
                                     </span>
                                 @endif
@@ -35,7 +35,7 @@
                                 <input id="password" type="password" class="form-control" name="password" required>
 
                                 @if ($errors->has('password'))
-                                    <span class="help-block">
+                                    <span class="help-block" style="display:contents">
                                         <strong>{{ $errors->first('password') }}</strong>
                                     </span>
                                 @endif

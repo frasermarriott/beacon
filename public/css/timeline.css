@@ -486,3 +486,8 @@ header h1 {
 .cd-timeline-block:first-child {
     margin-top: 35px;
 }
+
+.help-block {
+  display: contents;
+  font-size: 1em !important;
+}
