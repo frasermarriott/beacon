@@ -10,7 +10,7 @@
         <div class="row">
             <div class="col-md-2 col-sm-2 col-xs-2">
                 <div class="button-wrapper">
-                <a href="{{ URL::previous() }}" class="btn btn-default btn-lg"> < Back</a>
+                <a href="{{ route('home') }}" class="btn btn-default btn-lg"> < Back</a>
                 </div>
             </div>
 

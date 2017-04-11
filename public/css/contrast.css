@@ -1,0 +1,112 @@
+.navbar, .navbar.navbar-default {
+    background-color: #000000;
+}
+
+.welcome-greeting > h1 {
+	color: #000;
+    font-weight: 400;
+}
+
+/* Tiles */
+.main-colour {
+	background-color:#000363;
+}
+.alt-colour{
+	background-color:#2fcc1b;
+}
+
+.dash-tile-messages {
+	background-color:#000363;
+}
+.dash-tile-newsfeed {
+	background-color:#2fcc1b;
+}
+.dash-tile-photos {
+	background-color:#000363;
+}
+.dash-tile-family {
+	background-color:#2fcc1b;
+}
+.dash-tile-profile {
+	background-color:#000363;
+}
+.dash-tile-settings {
+	background-color:#2fcc1b;
+}
+
+.main-colour > .family > h2 {
+	color: #fff !important;
+}
+
+.newsfeed > h2, .family > h2, .settings > h2 {
+	color: #000;
+	text-shadow: 0px 0px #000 !important;
+}
+
+.alt-colour > .photos > h2, .alt-colour > .newsfeed > h2, .alt-colour > .settings > h2 {
+	color: #000 !important;
+	font-weight: bold;
+}
+
+
+/* Subnav */
+
+#subnav > div > div > div h2 {
+	color: #000;
+	font-weight: 500;
+}
+
+
+/* Chat */
+
+.chat .chat-history .my-message {
+    background: #1fce2c;
+}
+
+.chat .chat-history .other-message {
+    background: #002242;
+}
+
+textarea {
+    background-color: #000;
+    color: yellow;
+    font-size: 1.2em !important;
+}
+
+textarea::-webkit-input-placeholder {
+	color: yellow;
+}
+
+
+/* Newsfeed timeline */
+
+.cd-timeline-content {
+	background: #000;
+	color: yellow;
+}
+
+.cd-timeline-content > h2 {
+	color: yellow;
+}
+
+.cd-date {
+	color: #000;
+	font-weight: 500;
+}
+
+.cd-timeline-content .cd-read-more {
+	background: #fff;
+	color: #000;
+}
+
+
+/* Photo gallery */
+
+.thumb > .thumbnail {
+	background:  #000;
+	color: yellow;
+}
+
+.thumb > a > .caption {
+	color: yellow !important;
+}

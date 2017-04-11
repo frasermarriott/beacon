@@ -38,6 +38,31 @@
     <link href="{{ asset('css/jquery-ui.css') }}" rel="stylesheet">
     <link href="{{ asset('css/hover.min.css') }}" rel="stylesheet">
 
+    {{-- Check if User is signed in --}}
+    @if(Auth::User())
+        {{-- Use high contrast stylesheet if required --}}
+        {{-- @if(Auth::User()->contrast_settings =='high_contrast') --}}
+            <link href="{{ asset('css/contrast.css') }}" rel="stylesheet">
+        {{-- @endif --}}
+
+        {{-- Set font-size --}}
+        <style type="text/css">
+            @if(Auth::User()->font_settings =='large')
+                body {
+                    font-size: -webkit-calc(100% + 0.8em);
+                    font-size:        -calc(100% + 0.8em);
+                }
+            @endif
+
+            @if(Auth::User()->font_settings =='small') 
+                body {
+                    font-size: -webkit-calc(100% - 0.1em);
+                    font-size:        -calc(100% - 0.1em);
+                }
+            @endif
+        </style>
+    @endif
+
     {{-- jQuery --}}
     <script src="{{ asset('js/jquery.min.js') }}"></script>
     <script src="{{ asset('js/jquery-ui.min.js') }}"></script>

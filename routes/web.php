@@ -35,7 +35,7 @@ Route::get('/help-and-settings', ['as' => 'help-and-settings', 'uses' => 'HomeCo
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index');
+Route::get('/home', ['as' => 'home', 'uses' => 'HomeController@index']);
 
 // Messenger
 Route::group(['middleware' => 'web'], function () {

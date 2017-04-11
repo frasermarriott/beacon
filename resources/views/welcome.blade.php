@@ -9,7 +9,7 @@
         <h1>Welcome to beacon!</h1>
         <div id="button-container">
                     <a href="{{ route('register') }}" class="btn btn-primary btn-raised splash-call-to-action">Sign up now!</a>
-                </div>
+        </div>
     </div>
 </div>
 
@@ -49,7 +49,7 @@
             </div>
 
             <div class="col-md-5">
-                <img src="{{ asset('img/mockup-devices.png') }}" class="img-responsive">
+                <img src="{{ asset('img/mockup-devices.png') }}" class="img-responsive" alt="An image of the website displayed on various devices.">
             </div>
         </div> 
     </div>
@@ -70,7 +70,7 @@
             </div>
 
             <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 feature-image-container">
-                <img src="{{ asset('img/gentleman-mobile3.jpg') }}" class="img-responsive features-image center-block">
+                <img src="{{ asset('img/gentleman-mobile3.jpg') }}" class="img-responsive features-image center-block" alt="An image of a gentleman using Beacon on his mobile phone.">
             </div>
 
             <div class="col-lg-8 col-md-8">
@@ -87,7 +87,7 @@
     <div class="row section-spacer">
         <div class="container">
                 <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 feature-image-container">
-                    <img src="{{ asset('img/gentleman-2-gallery.jpg') }}" class="img-responsive features-image center-block">
+                    <img src="{{ asset('img/gentleman-2-gallery.jpg') }}" class="img-responsive features-image center-block" alt="An image of a gentleman using the application to view photos posted by his family.">
                 </div>
 
                 <div class="col-lg-8 col-md-8">
@@ -104,7 +104,7 @@
     <div class="row section-spacer">
         <div class="container">
             <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 feature-image-container">
-                <img src="{{ asset('img/gentleman-laptop2-chat.jpg') }}" class="img-responsive features-image center-block">
+                <img src="{{ asset('img/gentleman-laptop2-chat.jpg') }}" class="img-responsive features-image center-block" alt="A gentleman using Beacon to chat with his family.">
             </div>
 
             <div class="col-lg-8 col-md-8">

@@ -150,6 +150,28 @@ li > a {
 	}
 }
 
+/* Tiles */
+.dash-tile-messages {
+	background-color:#9e4c3b;
+}
+.dash-tile-newsfeed {
+	background-color:#d2ab59;
+}
+.dash-tile-photos {
+	background-color:#549767;
+}
+.dash-tile-family {
+	background-color:#34908f;
+}
+.dash-tile-profile {
+	background-color:#756099;
+}
+.dash-tile-settings {
+	background-color:#346ca4;
+}
+
+
+
 
 .dashboard-item {
 	/* height: 350px; */

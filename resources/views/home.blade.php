@@ -16,8 +16,7 @@
                 <h1>Good evening, {{ ucwords(\Auth::user()->first_name) }}</h1>
             @else
                 <h1>Welcome, {{ ucwords(\Auth::user()->first_name) }}</h1>
-            @endif
-            
+            @endif  
         </div>
 
         {{-- OpenWeatherMap --}}
@@ -48,7 +47,7 @@
 
     <div class="row">
         <a href="{{ route('messages') }}">
-            <div class="col-md-4 dashboard-item hvr-curl-top-right" style="background-color:#9e4c3b">
+            <div class="col-md-4 dashboard-item hvr-curl-top-right dash-tile-messages">
                 <div class="dashboard-icon messages">
                     <span class="centerer"></span>
 
@@ -61,7 +60,7 @@
         </a>
 
         <a href="{{ route('newsfeed') }}">
-            <div class="col-md-4 dashboard-item hvr-curl-top-right" style="background-color:#d2ab59">
+            <div class="col-md-4 dashboard-item hvr-curl-top-right dash-tile-newsfeed">
                 <div class="dashboard-icon newsfeed">
                     <span class="centerer"></span>
 
@@ -74,7 +73,7 @@
         </a>
 
         <a href="{{ route('photos') }}">
-            <div class="col-md-4 dashboard-item hvr-curl-top-right" style="background-color:#549767">
+            <div class="col-md-4 dashboard-item hvr-curl-top-right dash-tile-photos">
                 <div class="dashboard-icon photos">
                     <span class="centerer"></span>
 
@@ -91,7 +90,7 @@
 
     <div class="row">
         <a href="{{ route('family') }}">
-            <div class="col-md-4 dashboard-item hvr-curl-top-right" style="background-color:#34908f">
+            <div class="col-md-4 dashboard-item hvr-curl-top-right dash-tile-family">
                 <div class="dashboard-icon family">
                     <span class="centerer"></span>
 
@@ -104,7 +103,7 @@
         </a>
 
         <a href="{{ route('profile') }}">
-            <div class="col-md-4 dashboard-item hvr-curl-top-right" style="background-color:#756099">
+            <div class="col-md-4 dashboard-item hvr-curl-top-right dash-tile-profile">
                 <div class="dashboard-icon profile">
                     <span class="centerer"></span>
 
@@ -117,7 +116,7 @@
         </a>
 
         <a href="{{ route('help-and-settings') }}">
-            <div class="col-md-4 dashboard-item hvr-curl-top-right" style="background-color:#346ca4">
+            <div class="col-md-4 dashboard-item hvr-curl-top-right dash-tile-settings">
                 <div class="dashboard-icon settings">
                     <span class="centerer"></span>
 
@@ -157,7 +156,7 @@
 
     <div class="row">
         <a href="{{ route('messages') }}">
-            <div class="col-md-6 col-sm-6 col-xs-6 dashboard-item hvr-curl-top-right" style="background-color:#9e4c3b">
+            <div class="col-md-6 col-sm-6 col-xs-6 dashboard-item hvr-curl-top-right main-colour">
                 <div class="dashboard-icon messages">
                     <span class="centerer"></span>
 
@@ -170,7 +169,7 @@
         </a>
 
         <a href="{{ route('newsfeed') }}">
-            <div class="col-md-6 col-sm-6 col-xs-6 dashboard-item hvr-curl-top-right" style="background-color:#d2ab59">
+            <div class="col-md-6 col-sm-6 col-xs-6 dashboard-item hvr-curl-top-right alt-colour">
                 <div class="dashboard-icon newsfeed">
                     <span class="centerer"></span>
 
@@ -189,7 +188,7 @@
     <div class="row">
 
         <a href="{{ route('photos') }}">
-            <div class="col-md-6 col-sm-6 col-xs-6 dashboard-item hvr-curl-top-right" style="background-color:#549767">
+            <div class="col-md-6 col-sm-6 col-xs-6 dashboard-item hvr-curl-top-right alt-colour">
                 <div class="dashboard-icon photos">
                     <span class="centerer"></span>
 
@@ -202,7 +201,7 @@
         </a>
 
         <a href="{{ route('family') }}">
-            <div class="col-md-6 col-sm-6 col-xs-6 dashboard-item hvr-curl-top-right" style="background-color:#34908f">
+            <div class="col-md-6 col-sm-6 col-xs-6 dashboard-item hvr-curl-top-right main-colour">
                 <div class="dashboard-icon family">
                     <span class="centerer"></span>
 
@@ -220,7 +219,7 @@
     <div class="row">
 
         <a href="{{ route('profile') }}">
-            <div class="col-md-6 col-sm-6 col-xs-6 dashboard-item hvr-curl-top-right" style="background-color:#756099">
+            <div class="col-md-6 col-sm-6 col-xs-6 dashboard-item hvr-curl-top-right main-colour">
                 <div class="dashboard-icon profile">
                     <span class="centerer"></span>
 
@@ -233,7 +232,7 @@
         </a>
 
         <a href="{{ route('help-and-settings') }}">
-            <div class="col-md-6 col-sm-6 col-xs-6 dashboard-item hvr-curl-top-right" style="background-color:#346ca4">
+            <div class="col-md-6 col-sm-6 col-xs-6 dashboard-item hvr-curl-top-right alt-colour">
                 <div class="dashboard-icon settings">
                     <span class="centerer"></span>
 
