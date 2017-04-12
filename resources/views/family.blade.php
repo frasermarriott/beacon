@@ -32,6 +32,7 @@
       <h2>{{ucwords(Auth::user()->first_name)}} {{ucwords(Auth::user()->surname)}}'s Family</h2>
       <br>
 
+      @if(isset($users))
         @foreach($users as $user)
               <li href="#" class="list-group-item text-left">
                 
@@ -56,6 +57,7 @@
                 <div class="break"></div>
               </li>
         @endforeach
+      @endif
 
     </ul>
   </div>

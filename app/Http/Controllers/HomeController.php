@@ -111,8 +111,48 @@ class HomeController extends Controller
     }
 
 
-    // public function privacy_policy()
-    // {
-    //     return view('privacy_policy');
-    // }
+
+    // Referrals
+
+    public function invite()
+    {
+        if ( Auth::guest() ) {
+            return view('login');
+         }
+         else {
+
+            return view('referral.invite');
+         }
+    }
+
+
+    public function referral($id)
+    {
+        if ( Auth::guest() ) {
+            return view('login');
+         }
+         else {
+
+            return view('referral.referral', ['id'=>$id]);
+         }
+    }
+
+    public function confirm_referral(Request $request)
+    {
+        if ( Auth::guest() ) {
+            return view('login');
+         }
+         else {
+
+            // $family_id = $id;
+
+            DB::table('users')->where('id', '=', Auth::user()->id)->update([
+                'linked_to_family'      => Input::get('family_id'),
+            ]);
+
+            return redirect()->route('family');
+         }
+    }
+
+
 }

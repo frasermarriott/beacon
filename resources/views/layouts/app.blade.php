@@ -150,9 +150,11 @@
     <script src="{{ asset('js/app.js') }}"></script>
     <script src="{{ asset('js/material.min.js') }}"></script>
     <script src="{{ asset('js/ripples.min.js') }}"></script>
+    <script src="{{ asset('js/clipboard.min.js') }}"></script>
 
     <script>
         $.material.init();
+        new Clipboard('.btn');
     </script>
 </body>
 </html>

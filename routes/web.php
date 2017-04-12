@@ -21,6 +21,11 @@ Route::get('/', function () {
 });
 
 
+Route::get('/invite', ['as' => 'invite', 'uses' => 'HomeController@invite']);
+
+Route::get('/referral/{id}', ['as' => 'referral', 'uses' => 'HomeController@referral']);
+
+Route::post('/referral/confirm', ['as' => 'confirm_referral', 'uses' => 'HomeController@confirm_referral']);
 
 Route::get('/messages', ['as' => 'messages', 'uses' => 'HomeController@messages']);
 
