@@ -28,13 +28,17 @@
             <div class="profile-sidebar">
                 <!-- SIDEBAR USERPIC -->
                 <div class="profile-userpic">
-                    <img src="https://placehold.it/300x300.jpg" class="img-responsive" alt="">
+                    @if(Auth::user()->profile_img == 'default')
+                        <img src="{{Auth::user()->avatar}}" class="img-responsive" alt="Default profile picture">
+                    @else
+                        <img src="img/uploads/profile-pics/{{Auth::user()->profile_img}}" class="img-responsive" alt="My profile picture">
+                    @endif
                 </div>
                 <!-- END SIDEBAR USERPIC -->
                 <!-- SIDEBAR USER TITLE -->
                 <div class="profile-usertitle">
                     <div class="profile-usertitle-name">
-                        Example name
+                        {{ucwords(Auth::user()->first_name)}} {{ucwords(Auth::user()->surname)}}
                     </div>
 {{--                     <div class="profile-usertitle-job">
                         Grandma
@@ -57,19 +61,25 @@
                         </li>
                         <li>
                             <a href="#">
+                            <i class="glyphicon glyphicon-picture"></i>
+                            Update Profile Picture </a>
+                        </li>
+                        <li>
+                            <a href="#">
                             <i class="glyphicon glyphicon-user"></i>
                             Account Settings </a>
                         </li>
+                        
 {{--                         <li>
                             <a href="#" target="_blank">
                             <i class="glyphicon glyphicon-ok"></i>
                             Tasks </a>
                         </li> --}}
-                        <li>
+                       {{--  <li>
                             <a href="#">
                             <i class="glyphicon glyphicon-flag"></i>
                             Help </a>
-                        </li>
+                        </li> --}}
                     </ul>
                 </div>
                 <!-- END MENU -->
@@ -77,7 +87,11 @@
         </div>
         <div class="col-md-9">
             <div class="profile-content">
-               Some user related content goes here...
+                <h2>About Me</h2>
+               @if(Auth::user()->about_me == 'default')
+                    <p>Update your profile to add some information about yourself.</p>
+                    <a href="" class="btn btn-primary btn-raised"> Edit Profile</a>
+               @endif
             </div>
         </div>
     </div>

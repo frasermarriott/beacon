@@ -26,6 +26,10 @@ Route::get('/messages', ['as' => 'messages', 'uses' => 'HomeController@messages'
 
 Route::get('/newsfeed', ['as' => 'newsfeed', 'uses' => 'HomeController@newsfeed']);
 
+Route::get('/text_post/new', ['as' => 'new_text_post', 'uses' => 'PostController@new_text_post']);
+
+Route::post('/text_post/new/submit', ['as' => 'submit_new_text_post', 'uses' => 'PostController@submit_new_text_post']);
+
 Route::get('/photos', ['as' => 'photos', 'uses' => 'HomeController@photos']);
 
 Route::get('/family', ['as' => 'family', 'uses' => 'HomeController@family']);

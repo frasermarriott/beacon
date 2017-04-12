@@ -28,6 +28,8 @@ $(function(){
 		});
 	}
 
+
+
 	// var city_name = $("#city_name").val();
 	// console.log(city_name)
 

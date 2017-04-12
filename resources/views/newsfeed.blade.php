@@ -30,10 +30,17 @@
 <div class="container timeline-container">
 
 
-    <div class="row">
+    <div class="row push-top">
         <div class="col-md-12">
 
-          {{-- <img src="{{ asset('img/newsfeed-mockup.PNG') }}" class="img-responsive"> --}}
+
+        <div class="text-center">
+           <div class="btn-group">
+              <a href="" class="btn btn-primary btn-xl btn-raised">New text post</a>
+              <a href="" class="btn btn-primary btn-xl btn-raised">Share a photo</a>
+           </div>
+        </div>
+
 
 
 

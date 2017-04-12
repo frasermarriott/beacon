@@ -40,9 +40,9 @@
     {{-- Check if User is signed in --}}
     @if(Auth::User())
         {{-- Use high contrast stylesheet if required --}}
-        {{-- @if(Auth::User()->contrast_settings =='high_contrast') --}}
+        @if(Auth::User()->contrast_settings =='high_contrast')
             <link href="{{ asset('css/contrast.css') }}" rel="stylesheet">
-        {{-- @endif --}}
+        @endif
 
         {{-- Set font-size --}}
         <style type="text/css">

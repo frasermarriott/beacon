@@ -82,6 +82,7 @@
                         <input id="contrast_settings" type="hidden" name="contrast_settings" value="default">
                         <input id="font_settings" type="hidden" name="font_settings" value="default">
                         <input id="profile_img" type="hidden" name="profile_img" value="default">
+                        <input id="about_me" type="hidden" name="about_me" value="default">
 
                         <div class="form-group">
                             <div class="col-md-6 col-md-offset-4">

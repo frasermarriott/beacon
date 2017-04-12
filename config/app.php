@@ -228,6 +228,7 @@ return [
         'View' => Illuminate\Support\Facades\View::class,
         'Talk' => Nahid\Talk\Facades\Talk::class,
         'Carbon' => 'Carbon\Carbon',
+        'Input' => Illuminate\Support\Facades\Input::class,
 
     ],
 

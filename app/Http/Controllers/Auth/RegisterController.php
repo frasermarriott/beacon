@@ -56,6 +56,7 @@ class RegisterController extends Controller
             'contrast_settings' => 'required|max:255',
             'font_settings' => 'required|max:255',
             'profile_img' => 'required|max:255',
+            'about_me' => 'required|max:500',
         ]);
     }
 
@@ -76,6 +77,7 @@ class RegisterController extends Controller
             'contrast_settings' => $data['contrast_settings'],
             'font_settings' => $data['font_settings'],
             'profile_img' => $data['profile_img'],
+            'about_me' => $data['about_me'],
         ]);
     }
 }
