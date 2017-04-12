@@ -39,7 +39,8 @@ class HomeController extends Controller
          }
          else {
 
-            $users = User::all();
+            // Select only family members to be sent to view
+            $users = User::all()->where('linked_to_family', Auth::User()->linked_to_family);
             return view('messages', compact('users'));
 
          }
@@ -74,7 +75,10 @@ class HomeController extends Controller
              return view('welcome');
          }
          else {
-             return view('family');
+
+            // Select only family members to be sent to view
+            $users = User::all()->where('linked_to_family', Auth::User()->linked_to_family);
+            return view('family', compact('users'));
          }
     }
 

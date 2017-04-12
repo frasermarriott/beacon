@@ -19,74 +19,47 @@
     		</div>
     	
     </div>
+  </div>
 </div>
 
 
-<div class="container pus-top">
+
+<div class="container push-top" style="margin-top:200px;">
 
 
-  <div class="jumbotron list-content">
+  <div class="jumbotron list-content center-block">
     <ul class="list-group">
-      <li href="#" class="list-group-item title">
-        My Family
-      </li>
+      <h2>{{ucwords(Auth::user()->first_name)}} {{ucwords(Auth::user()->surname)}}'s Family</h2>
       <br>
-      <li href="#" class="list-group-item text-left">
-        <img class="img-thumbnail" src="http://bootdey.com/img/Content/User_for_snippets.png">
-        <label class="name">
-            Person 1<br>
-        </label>
-        <label class="pull-right">
-            <a  class="btn btn-success btn-xs glyphicon glyphicon-user" href="#" title="View"></a>
-            <a  class="btn btn-danger  btn-xs glyphicon glyphicon-trash" href="#" title="Delete"></a>
-            <a  class="btn btn-info  btn-xs glyphicon glyphicon glyphicon-comment" href="#" title="Send message"></a>
-        </label>
-        <div class="break"></div>
-      </li>
-      <li href="#" class="list-group-item text-left">
-          <img class="img-thumbnail"  src="http://bootdey.com/img/Content/user_1.jpg">
-        <label class="name">
-          Person 2
-        </label>
-        <label class="pull-right">
-            <a  class="btn btn-success btn-xs glyphicon glyphicon-user" href="#" title="View"></a>
-            <a  class="btn btn-danger  btn-xs glyphicon glyphicon-trash" href="#" title="Delete"></a>
-            <a  class="btn btn-info  btn-xs glyphicon glyphicon glyphicon-comment" href="#" title="Send message"></a>
-        </label>
-        <div class="break"></div>
-      </li>
-      <li href="#" class="list-group-item text-left">
-          <img class="img-thumbnail"  src="http://bootdey.com/img/Content/user_2.jpg">
-          <label class="name">
-            Person 3
-          </label>
-        <label class="pull-right">
-            <a  class="btn btn-success btn-xs glyphicon glyphicon-user" href="#" title="View"></a>
-            <a  class="btn btn-danger  btn-xs glyphicon glyphicon-trash" href="#" title="Delete"></a>
-            <a  class="btn btn-info  btn-xs glyphicon glyphicon glyphicon-comment" href="#" title="Send message"></a>
-        </label>
-        <div class="break"></div>
-      </li>
-      {{-- <li href="#" class="list-group-item text-left">
-        <a class="btn btn-block btn-primary">
-            <i class="glyphicon glyphicon-refresh"></i>
-            Load more...
-        </a>
-      </li> --}}
+
+        @foreach($users as $user)
+              <li href="#" class="list-group-item text-left">
+                
+                <a href="{{route('message.read', ['id'=>$user->id])}}">
+                    <img class="img-thumbnail" src="{{$user->avatar}}">
+                </a>
+                <label class="name user-name">
+                    <a href="{{route('message.read', ['id'=>$user->id])}}">{{ucwords($user->first_name)}} {{ucwords($user->surname)}}</a><br>
+                </label>
+                <label class="pull-right list-send-msg-btn">
+                    {{-- <a href="{{route('message.read', ['id'=>$user->id])}}" class="btn btn-success btn-xl btn-raised">Send Message</a> --}}
+
+                    
+                    {{-- <a class="btn btn-success btn-xs" href="#"><span class="glyphicon glyphicon-user"> View Profile</span></a>  --}}
+                    
+
+                    <a class="btn btn-success btn-xs glyphicon glyphicon-user" href="#" title="View Profile"></a>
+                    @if($user->id !== Auth::user()->id)
+                      <a class="btn btn-info btn-xs glyphicon glyphicon glyphicon-comment" href="{{route('message.read', ['id'=>$user->id])}}" title="Send message"></a>
+                    @endif
+                </label>
+                <div class="break"></div>
+              </li>
+        @endforeach
+
     </ul>
   </div>
-  </div>
-
-{{-- 
-    <div class="row">
-        <div class="col-md-12">
-
-          <img src="{{ asset('img/family-mockup.PNG') }}" class="img-responsive">
-
-            
-        </div>
-
-    </div> --}}
-
 </div>
+
+
 @endsection

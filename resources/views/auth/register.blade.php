@@ -78,6 +78,11 @@
                             </div>
                         </div>
 
+                        <input id="linked_to_family" type="hidden" name="linked_to_family" value="not_yet_linked">
+                        <input id="contrast_settings" type="hidden" name="contrast_settings" value="default">
+                        <input id="font_settings" type="hidden" name="font_settings" value="default">
+                        <input id="profile_img" type="hidden" name="profile_img" value="default">
+
                         <div class="form-group">
                             <div class="col-md-6 col-md-offset-4">
                                 <button type="submit" class="btn btn-primary btn-raised">

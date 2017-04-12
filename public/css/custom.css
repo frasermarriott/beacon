@@ -572,7 +572,7 @@ label {
 
 .jumbotron .btn {
     padding: 5px 5px !important;
-    font-size: 12px !important;
+    font-size: 12px;
 }
 .prj-name {
     color:#5bc0de;    
@@ -585,6 +585,14 @@ label {
     color:#5bc0de;    
 }
 
+
+.list-send-msg-btn > .btn { 
+	font-size: 1.1em !important;
+}
+
+.user-name > a {
+	font-size: 1.2em;
+}
 
 
 
@@ -647,21 +655,20 @@ footer {
 	padding-top: 80px;
  }
 
-/* .features-img {
-	max-width: 300px;
-	height: 300px;
-	border-radius: 100%;
-	background-size: cover;
-}
 
-.features-img-1 {
-	background-image: url('../img/gentleman-mobile2.jpg');
-} */
 
 
 .modal {
   text-align: center;
 }
+
+@media screen and (min-width: 1024px) { 
+	.list-content {
+		width: 60%;
+	}
+}
+
+
 
 @media screen and (min-width: 768px) { 
   .modal:before {

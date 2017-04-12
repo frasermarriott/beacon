@@ -18,40 +18,52 @@
                 <h2>Messages</h2>
             </div>
         
-    </div>
-</div>
-
-
-<div class="container push-top">
-
-
-    <div class="row">
-        <div class="col-xl-12">
-
-          {{-- <img src="{{ asset('img/messages-mockup.png') }}" class="img-responsive"> --}}
-
-            @foreach($users as $user)
-                    <table class="table">
-                        <tr>
-                            <td>
-                                <img src="{{$user->avatar}}">
-                                {{$user->first_name}}
-                            </td>
-                            <td>
-                                <a href="{{route('message.read', ['id'=>$user->id])}}" class="btn btn-success pull-right">Send Message</a>
-                            </td>
-                        </tr>
-                    </table>
-            @endforeach
-
-
-
-            
         </div>
-
     </div>
-
 </div>
+
+
+
+
+
+<div class="container push-top" style="margin-top:200px;">
+
+
+  <div class="jumbotron list-content center-block">
+    <ul class="list-group">
+
+      <h2>{{ucwords(Auth::user()->first_name)}} {{ucwords(Auth::user()->surname)}}'s Family</h2>
+
+      <br>
+
+        @foreach($users as $user)
+              <li href="#" class="list-group-item text-left">
+                @if($user->id !== Auth::user()->id)
+                    <a href="{{route('message.read', ['id'=>$user->id])}}">
+                        <img class="img-thumbnail" src="{{$user->avatar}}">
+                    </a>
+                    
+                    <label class="name user-name">
+                        <a href="{{route('message.read', ['id'=>$user->id])}}">{{ucwords($user->first_name)}} {{ucwords($user->surname)}}</a><br>
+                    </label>
+                @endif
+           {{--      @if($user->id == Auth::user()->id)
+                    <a href="#">{{ucwords($user->first_name)}} {{ucwords($user->surname)}}</a><br>
+                @endif --}}
+                @if($user->id !== Auth::user()->id)
+                    <label class="pull-right list-send-msg-btn">
+                        <a href="{{route('message.read', ['id'=>$user->id])}}" class="btn btn-success btn-xl btn-raised">View Messages</a>
+                    </label>
+                @endif
+                <div class="break"></div>
+              </li>
+        @endforeach
+
+    </ul>
+  </div>
+</div>
+
+
 
 
 @endsection
