@@ -21,6 +21,7 @@ Route::get('/', function () {
 });
 
 
+
 Route::get('/messages', ['as' => 'messages', 'uses' => 'HomeController@messages']);
 
 Route::get('/newsfeed', ['as' => 'newsfeed', 'uses' => 'HomeController@newsfeed']);
@@ -32,6 +33,10 @@ Route::get('/family', ['as' => 'family', 'uses' => 'HomeController@family']);
 Route::get('/profile', ['as' => 'profile', 'uses' => 'HomeController@profile']);
 
 Route::get('/help-and-settings', ['as' => 'help-and-settings', 'uses' => 'HomeController@help_and_settings']);
+
+Route::get('/welcome', ['as' => 'welcome', 'uses' => 'PagesController@welcome']);
+Route::get('/privacy_policy', ['as' => 'privacy_policy', 'uses' => 'PagesController@privacy_policy']);
+Route::get('/contact_us', ['as' => 'contact_us', 'uses' => 'PagesController@contact_us']);
 
 Auth::routes();
 
@@ -47,3 +52,5 @@ Route::group(['prefix'=>'ajax', 'as'=>'ajax::'], function() {
   	Route::post('message/send', 'MessageController@ajaxSendMessage')->name('message.new');
    	Route::delete('message/delete/{id}', 'MessageController@ajaxDeleteMessage')->name('message.delete');
 });
+
+

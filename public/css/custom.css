@@ -1,5 +1,6 @@
 body {
 	font-size: 1.5em;
+	background-color: #fff;
 }
 
 li > a {
@@ -597,6 +598,10 @@ label {
 	margin-top: 140px;
 }
 
+.push-footer {
+	margin-top: 50px;
+}
+
 footer {
     position: absolute;
     width: 100%;
@@ -605,7 +610,7 @@ footer {
     color: white;
     font-size: 1.2em;
     padding-top: 95px;
-    margin-top: 50px;
+    /* margin-top: 50px; */
     text-align: center;
 }
 
@@ -652,3 +657,28 @@ footer {
 .features-img-1 {
 	background-image: url('../img/gentleman-mobile2.jpg');
 } */
+
+
+.modal {
+  text-align: center;
+}
+
+@media screen and (min-width: 768px) { 
+  .modal:before {
+    display: inline-block;
+    vertical-align: middle;
+    content: " ";
+    height: 100%;
+  }
+}
+
+.modal-dialog {
+  display: inline-block;
+  text-align: left;
+  vertical-align: middle;
+  width: 60%;
+}
+
+.welcomepage {
+	font-size: 1.3em;
+}

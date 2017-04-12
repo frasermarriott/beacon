@@ -99,4 +99,10 @@ class HomeController extends Controller
              return view('help-and-settings');
          }
     }
+
+
+    // public function privacy_policy()
+    // {
+    //     return view('privacy_policy');
+    // }
 }
