@@ -137,7 +137,7 @@ class PostController extends Controller
             $this->validate($request, $rules);
 
             $random_string = str_random(20); // Generate a random string to prepend to the filename, to prevent duplicate filenames.
-            $file_name = ($random_string.'-'.($file->getClientOriginalName())); // Request the file name.
+            $file_name = ($random_string.'-'.(strtolower(str_replace(' ', '', $file->getClientOriginalName())))); // Request the file name.
             $destination_path = config('app.post_file_destination_path').'/'.$file_name; // Set the destination.
             $uploaded = Storage::put($destination_path, file_get_contents($file->getRealPath()));
 
