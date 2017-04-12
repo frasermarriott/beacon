@@ -30,6 +30,10 @@ Route::get('/text_post/new', ['as' => 'new_text_post', 'uses' => 'PostController
 
 Route::post('/text_post/new/submit', ['as' => 'submit_new_text_post', 'uses' => 'PostController@submit_new_text_post']);
 
+Route::get('/image_post/new', ['as' => 'new_image_post', 'uses' => 'PostController@new_image_post']);
+
+Route::post('/image_post/new/submit', ['as' => 'submit_new_image_post', 'uses' => 'PostController@submit_new_image_post']);
+
 Route::get('/photos', ['as' => 'photos', 'uses' => 'HomeController@photos']);
 
 Route::get('/family', ['as' => 'family', 'uses' => 'HomeController@family']);

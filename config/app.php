@@ -2,6 +2,11 @@
 
 return [
 
+    'post_file_destination_path' => 'img/uploads/posts',
+    'profile_file_destination_path' => 'img/uploads/profile-pics',
+    'allowed_file_types' => 'jpg,jpeg,png,gif',
+    'max_file_size' => 2000,
+
     /*
     |--------------------------------------------------------------------------
     | Application Name

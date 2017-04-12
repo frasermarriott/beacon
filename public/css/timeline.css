@@ -491,3 +491,15 @@ header h1 {
   display: contents;
   font-size: 1em !important;
 }
+
+.cd-timeline-content {
+  border: 1px solid #e4e4e4;
+}
+
+.cd-timeline-content::before {
+  border-left-color: #e0e0e0;
+}
+
+.cd-timeline-block:nth-child(even) .cd-timeline-content::before {
+  border-right-color: #e0e0e0;
+}

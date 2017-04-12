@@ -36,8 +36,8 @@
 
         <div class="text-center">
            <div class="btn-group">
-              <a href="" class="btn btn-primary btn-xl btn-raised">New text post</a>
-              <a href="" class="btn btn-primary btn-xl btn-raised">Share a photo</a>
+              <a href="{{ route('new_text_post') }}" class="btn btn-primary btn-xl btn-raised">New text post</a>
+              <a href="{{ route('new_image_post') }}" class="btn btn-primary btn-xl btn-raised">Share a photo</a>
            </div>
         </div>
 
@@ -45,7 +45,55 @@
 
 
             <section id="cd-timeline" class="cd-container">
+
+
+
+            @foreach($posts as $post)
                 <div class="cd-timeline-block">
+
+                    @if($post->post_img !== 'default')
+                        <div class="cd-timeline-img cd-picture">
+                            <img src="{{ asset('img/icons/timeline/cd-icon-picture.svg') }}" alt="Picture">
+                        </div> <!-- cd-timeline-img -->
+                    @else
+                        <div class="cd-timeline-img cd-picture">
+                            <img src="{{ asset('img/icons/timeline/cd-icon-text.svg') }}" alt="Picture">
+                        </div> <!-- cd-timeline-img -->
+                    @endif
+  
+                    <div class="cd-timeline-content">
+                    <caption>Posted by {{$post->posted_by_user_name}}</caption>
+                        <h2>{{ucfirst($post->post_title)}}</h2>
+
+
+                        @if($post->post_img !== 'default')
+                            {{-- <img src="https://i.imgur.com/piDKjU9.jpg" class="img-responsive"> --}}
+                            <img src="img/uploads/posts/{{$post->post_img}}" class="img-responsive">
+                        @endif
+
+                        <p>{{ucfirst($post->post_description)}}</p>
+
+                        
+
+                        <a href="#0" class="cd-like"><span class="glyphicon glyphicon-heart"> </span> Like</a>
+                        <a href="#0" class="cd-read-more"><span class="glyphicon glyphicon-comment"> </span> Comments</a>
+                        <span class="cd-date">{{Carbon::parse($post->created_at)->toFormattedDateString()}}</span>
+                    </div> <!-- cd-timeline-content -->
+                </div> <!-- cd-timeline-block -->
+            @endforeach
+
+
+
+
+
+
+
+
+
+
+
+
+                {{-- <div class="cd-timeline-block">
                     <div class="cd-timeline-img cd-picture">
                         <img src="{{ asset('img/icons/timeline/cd-icon-picture.svg') }}" alt="Picture">
                     </div> <!-- cd-timeline-img -->
@@ -122,7 +170,7 @@
                         <p>This is the content of the last section</p>
                         <span class="cd-date">Feb 26</span>
                     </div> <!-- cd-timeline-content -->
-                </div> <!-- cd-timeline-block -->
+                </div> <!-- cd-timeline-block --> --}}
             </section> <!-- cd-timeline -->
 
 

@@ -689,3 +689,9 @@ footer {
 .welcomepage {
 	font-size: 1.3em;
 }
+
+
+.form-group input[type=file] {
+    opacity: 1;
+    position: relative;
+}

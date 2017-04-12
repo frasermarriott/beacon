@@ -53,7 +53,13 @@ class HomeController extends Controller
              return view('welcome');
          }
          else {
-             return view('newsfeed');
+
+            // Get the latest posts from the database
+            $posts = DB::table('posts')
+                     ->where('shared_with', Auth::User()->linked_to_family)
+                     ->latest()
+                     ->get();
+            return view('newsfeed', compact('posts'));
          }
     }
 

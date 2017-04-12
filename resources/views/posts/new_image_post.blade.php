@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', 'New text post')
+@section('title', 'Share a photo')
 
 @section('content')
 <div id="wrap">
@@ -9,9 +9,9 @@
     <div class="row">
         <div class="col-md-8 col-md-offset-2">
             <div class="panel panel-default">
-                <div class="panel-heading">New text post</div>
+                <div class="panel-heading">Share a photo</div>
                 <div class="panel-body">
-                    <form class="form-horizontal" role="form" method="POST" action="{{ route('submit_new_text_post') }}">
+                    <form class="form-horizontal" role="form" method="POST" action="{{ route('submit_new_image_post') }}" enctype="multipart/form-data">
                         {{ csrf_field() }}
 
                         <div class="form-group{{ $errors->has('post_title') ? ' has-error' : '' }}">
@@ -42,9 +42,18 @@
                             </div>
                         </div>
 
+
+                        <div class="form-group">
+                            <label for="file" class="col-md-4 control-label">Select Photo</label>
+
+                            <div class="col-md-6">
+                                <input id="file" name="file" type="file" class="file">
+                            </div>
+                        </div>
+
                         <input id="post_id" type="hidden" name="post_id" value="test_id">
-                        <input id="post_img" type="hidden" name="post_img" value="default">
                         <input id="post_link" type="hidden" name="post_link" value="default">
+                        <input id="post_img" type="hidden" name="post_img" value="imagetest">
                         <input id="posted_by_user" type="hidden" name="posted_by_user" value="{{Auth::user()->id}}">
                         <input id="posted_by_user_name" type="hidden" name="posted_by_user_name" value="{{ucwords(Auth::user()->first_name)}} {{ucwords(Auth::user()->surname)}}">
                         <input id="likes" type="hidden" name="likes" value="0">
