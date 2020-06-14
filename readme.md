@@ -5,7 +5,7 @@
 
 This web app was developed as part of my Honours Project on the Web Design and Development course at Edinburgh Napier University.
 
-The project set out to make an easy to use social network website that was targeted at inexperienced older users. Through the incorporation of easy to use interfaces, accessibility options, responsiveness and modern web technologies, a web application was produced  in accordance with industry standard conventions and guidelines. 
+I set out to make an easy to use social network website that was targeted at inexperienced older users. Through the incorporation of easy to use interfaces, accessibility options, responsiveness and modern web technologies, a web application was produced  in accordance with industry standard conventions and guidelines in order to provide an optimal user experience. 
 
 ## Beacon
 
@@ -17,9 +17,11 @@ Beacon is a social network website designed with the intention of being easy to 
 
 During the design and development process it was important to make the web application not only function effectively, but also make use of best practises and maintain a good architecture to allow for easy extensibility. Although initially the website will be relatively small-scale, developing it using industry standard conventions and architecture will help to allow for scalability when implementing future development and enabling it to function as a large-scale, high traffic web application.
 
-![](docs/database_structure.png)
+<img src="docs/database_structure.png">
 
 ## Framework
+
+<img src="docs/laravel.png" alt="laravel">
 
 Laravel was selected as the framework in which to develop the backend functionality of the website. Laravel’s security features, intuitive syntax and excellent online documentation were beneficial in developing the application.   
 
