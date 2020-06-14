@@ -1,6 +1,8 @@
 
 # About this project
 
+![](docs/mockup-devices.png)
+
 This web app was developed as part of my Honours Project on the Web Design and Development course at Edinburgh Napier University.
 
 The project set out to make an easy to use social network website that was targeted at inexperienced older users. Through the incorporation of easy to use interfaces, accessibility options, responsiveness and modern web technologies, a web application was produced  in accordance with industry standard conventions and guidelines. 
@@ -9,9 +11,13 @@ The project set out to make an easy to use social network website that was targe
 
 Beacon is a social network website designed with the intention of being easy to use for people who may not be experienced in the use of digital technology, such as older generations who did not grow up using it. The overall aim of the website is to positively affect the lives of its users by allowing them to stay connected with family and loved ones by making the website accessible and easy to use. 
 
+![](docs/user.jpg) ![](docs/user-photos.jpg)
+
 ## Application Architecture 
 
 During the design and development process it was important to make the web application not only function effectively, but also make use of best practises and maintain a good architecture to allow for easy extensibility. Although initially the website will be relatively small-scale, developing it using industry standard conventions and architecture will help to allow for scalability when implementing future development and enabling it to function as a large-scale, high traffic web application.
+
+![](docs/database_structure.png)
 
 ## Framework
 
@@ -34,8 +40,12 @@ It was important that an adequate level of clarity was provided as to how their 
 
 An SSL certificate was issued by Comodo to provide HTTPS encryption for the website. Hyper Text Transfer Protocol Secure is the secure version of HTTP, meaning that all communications between the user and the website are encrypted. When a trusted SSL certificate is used during a HTTPS connection, users will see a green padlock icon in the browser address bar. 
 
+![](docs/https.PNG)
+
 Beacon incorporates the use of Cross-Site Request Forgery (CSRF) and Cross-Site Scripting (XSS) protection to prevent unauthorised requests to the server. When a page is loaded, a token is generated in the header. Any request sent to the server, for example, a form submission or AJAX request, must have a matching token to allow it to be accepted. 
 
 Passwords stored in the database are hashed to improve security in case of a data breach
+
+![](docs/hashed_passwords.PNG)
 
 
